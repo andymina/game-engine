@@ -11,6 +11,8 @@
 		32E381312683EA180096EB94 /* HunterApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E381302683EA180096EB94 /* HunterApp.cpp */; };
 		32E381352683EC810096EB94 /* Hunter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E381342683EC810096EB94 /* Hunter.h */; };
 		32E381382683ED0E0096EB94 /* HunterCentral.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E381372683ED0E0096EB94 /* HunterCentral.h */; };
+		32E381952684401B0096EB94 /* pch.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E381942684401B0096EB94 /* pch.h */; };
+		32E381982684404E0096EB94 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E381972684404E0096EB94 /* pch.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		32E381302683EA180096EB94 /* HunterApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HunterApp.cpp; sourceTree = "<group>"; };
 		32E381342683EC810096EB94 /* Hunter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
 		32E381372683ED0E0096EB94 /* HunterCentral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HunterCentral.h; sourceTree = "<group>"; };
+		32E381942684401B0096EB94 /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.h; sourceTree = "<group>"; };
+		32E381972684404E0096EB94 /* pch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pch.cpp; sourceTree = "<group>"; };
+		32E381A12684439F0096EB94 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 		32E380FA2683E6460096EB94 = {
 			isa = PBXGroup;
 			children = (
+				32E381A12684439F0096EB94 /* .gitignore */,
 				32E381052683E6460096EB94 /* game-engine */,
 				32E381042683E6460096EB94 /* Products */,
 			);
@@ -64,6 +70,7 @@
 				32E3812D2683E8B30096EB94 /* HunterApp.h */,
 				32E381342683EC810096EB94 /* Hunter.h */,
 				32E381372683ED0E0096EB94 /* HunterCentral.h */,
+				32E381942684401B0096EB94 /* pch.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -79,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				32E381302683EA180096EB94 /* HunterApp.cpp */,
+				32E381972684404E0096EB94 /* pch.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -92,6 +100,7 @@
 			files = (
 				32E381382683ED0E0096EB94 /* HunterCentral.h in Headers */,
 				32E381352683EC810096EB94 /* Hunter.h in Headers */,
+				32E381952684401B0096EB94 /* pch.h in Headers */,
 				32E3812E2683E8B30096EB94 /* HunterApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E381312683EA180096EB94 /* HunterApp.cpp in Sources */,
+				32E381982684404E0096EB94 /* pch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +291,8 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/andymina/coding/game-engine/game-engine/include/pch.h";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					_HUNTER_DLL_BUILD,
@@ -288,6 +300,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				OBJROOT = "$(PROJECT_DIR)/game-engine/obj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -304,9 +317,12 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/andymina/coding/game-engine/game-engine/include/pch.h";
 				GCC_PREPROCESSOR_DEFINITIONS = _HUNTER_DLL_BUILD;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				OBJROOT = "$(PROJECT_DIR)/game-engine/obj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

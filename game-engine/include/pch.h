@@ -8,5 +8,9 @@
 #ifndef pch_h
 #define pch_h
 
+#include <vector>
+#include <string>
+#include <iostream>
+#include <cassert>
 
 #endif /* pch_h */

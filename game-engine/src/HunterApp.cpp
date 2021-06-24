@@ -5,8 +5,7 @@
 //  Created by Andy Mina on 6/23/21.
 //
 
-#include <cassert>
-#include <iostream>
+#include <pch.h>
 #include "HunterApp.h"
 
 namespace Hunter {
