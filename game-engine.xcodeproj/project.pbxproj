@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32E381072683E6460096EB94 /* game_engine.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 32E381062683E6460096EB94 /* game_engine.hpp */; };
-		32E381092683E6460096EB94 /* game_enginePriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 32E381082683E6460096EB94 /* game_enginePriv.hpp */; };
-		32E3810B2683E6460096EB94 /* game_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E3810A2683E6460096EB94 /* game_engine.cpp */; };
+		32E3812E2683E8B30096EB94 /* HunterApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E3812D2683E8B30096EB94 /* HunterApp.h */; };
+		32E381312683EA180096EB94 /* HunterApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E381302683EA180096EB94 /* HunterApp.cpp */; };
+		32E381352683EC810096EB94 /* Hunter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E381342683EC810096EB94 /* Hunter.h */; };
+		32E381382683ED0E0096EB94 /* HunterCentral.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E381372683ED0E0096EB94 /* HunterCentral.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32E381032683E6460096EB94 /* libgame-engine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libgame-engine.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32E381062683E6460096EB94 /* game_engine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_engine.hpp; sourceTree = "<group>"; };
-		32E381082683E6460096EB94 /* game_enginePriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_enginePriv.hpp; sourceTree = "<group>"; };
-		32E3810A2683E6460096EB94 /* game_engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_engine.cpp; sourceTree = "<group>"; };
+		32E3812D2683E8B30096EB94 /* HunterApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HunterApp.h; sourceTree = "<group>"; };
+		32E381302683EA180096EB94 /* HunterApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HunterApp.cpp; sourceTree = "<group>"; };
+		32E381342683EC810096EB94 /* Hunter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
+		32E381372683ED0E0096EB94 /* HunterCentral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HunterCentral.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,11 +51,36 @@
 		32E381052683E6460096EB94 /* game-engine */ = {
 			isa = PBXGroup;
 			children = (
-				32E381062683E6460096EB94 /* game_engine.hpp */,
-				32E381082683E6460096EB94 /* game_enginePriv.hpp */,
-				32E3810A2683E6460096EB94 /* game_engine.cpp */,
+				32E381282683E7CB0096EB94 /* src */,
+				32E381272683E7C70096EB94 /* obj */,
+				32E381262683E7C40096EB94 /* include */,
 			);
 			path = "game-engine";
+			sourceTree = "<group>";
+		};
+		32E381262683E7C40096EB94 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				32E3812D2683E8B30096EB94 /* HunterApp.h */,
+				32E381342683EC810096EB94 /* Hunter.h */,
+				32E381372683ED0E0096EB94 /* HunterCentral.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		32E381272683E7C70096EB94 /* obj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = obj;
+			sourceTree = "<group>";
+		};
+		32E381282683E7CB0096EB94 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				32E381302683EA180096EB94 /* HunterApp.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,8 +90,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E381072683E6460096EB94 /* game_engine.hpp in Headers */,
-				32E381092683E6460096EB94 /* game_enginePriv.hpp in Headers */,
+				32E381382683ED0E0096EB94 /* HunterCentral.h in Headers */,
+				32E381352683EC810096EB94 /* Hunter.h in Headers */,
+				32E3812E2683E8B30096EB94 /* HunterApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E3810B2683E6460096EB94 /* game_engine.cpp in Sources */,
+				32E381312683EA180096EB94 /* HunterApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +273,7 @@
 		32E3810F2683E6460096EB94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FSUB596TTS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -252,7 +281,13 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					_HUNTER_DLL_BUILD,
+					_MYDEBUG,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -261,6 +296,7 @@
 		32E381102683E6460096EB94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FSUB596TTS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -268,7 +304,9 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _HUNTER_DLL_BUILD;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
