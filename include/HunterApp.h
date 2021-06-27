@@ -8,10 +8,11 @@
 #ifndef HunterApp_h
 #define HunterApp_h
 
-#include <HunterCentral.h>
+#include "HunterCentral.h"
+#include "WindowsOS/WindowsOSWindow.h"
 
 namespace Hunter {
-	class DYNAMIC_LIB HunterApp {
+	class HUNTER_API HunterApp {
 	public:
 		// Starts the game
 		void RunGame();
@@ -22,7 +23,10 @@ namespace Hunter {
 		
 	private:
 		HunterApp();
+		virtual ~HunterApp();
+		// Make this class a singleton
 		inline static HunterApp* instance{ nullptr };
+		Hunter::Window* appWindow{ nullptr };
 	};
 }
 

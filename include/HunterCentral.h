@@ -10,16 +10,16 @@
 
 // Define dynamic library for Windows x32 and x64
 #if defined(_WIN32) && defined(_HUNTER_DLL_BUILD)
-	#define DYNAMIC_LIB __declspec(dllexport)
+	#define HUNTER_API __declspec(dllexport)
 #elif defined(_WIN32) && !defined(_HUNTER_DLL_BUILD)
-	#define DYNAMIC_LIB __declspec(dllimport)
+	#define HUNTER_API __declspec(dllimport)
 #endif
 
 // Define dynamic library for macOS
 #if defined(__APPLE__) && defined(_HUNTER_DLL_BUILD)
-	#define DYNAMIC_LIB __attribute__((visibility("default")))
+	#define HUNTER_API __attribute__((visibility("default")))
 #elif defined(__APPLE__) && !defined(_HUNTER_DLL_BUILD)
-	#define DYNAMIC_LIB
+	#define HUNTER_API
 #endif
 
 // Define my debug environment

@@ -8,8 +8,8 @@
 #ifndef Hunter_h
 #define Hunter_h
 
-#include <HunterCentral.h>
-#include <HunterApp.h>
+#include "HunterCentral.h"
+#include "HunterApp.h"
 
 #define START_GAME(classname)\
 	int main() {\

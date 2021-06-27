@@ -13,7 +13,8 @@ namespace Hunter {
 		HLOG("Starting the game");
 		// Event loop
 		while (true) {
-			
+			this->appWindow->SwapBuffers();
+			this->appWindow->PollForEvent();
 		}
 	}
 	
@@ -22,11 +23,20 @@ namespace Hunter {
 	}
 	
 	void HunterApp::Init() {
+		// Make sure this class is a singleton
 		if (instance)
 			instance = new HunterApp;
 	}
 	
 	HunterApp::HunterApp() {
+		// Assert this class is a singleton
 		assert(!instance);
+		
+		this->appWindow = new WindowsOSWindow;
+		this->appWindow->CreateWindow(800, 600);
+	}
+	
+	HunterApp::~HunterApp() {
+		this->appWindow->DeleteWindow();
 	}
 }
