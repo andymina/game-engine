@@ -11,7 +11,7 @@
 #include "HunterCentral.h"
 
 namespace Hunter {
-	class HUNTER_API Window {
+	class Window {
 	public:
 		/*
 		 The following functions have been labeled as pure virtual functions so we can use OS specific code.

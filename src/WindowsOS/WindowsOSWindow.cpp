@@ -11,13 +11,14 @@
 namespace Hunter {
 	bool WindowsOSWindow::CreateWindow(unsigned int width, unsigned int height) {
 		glfwInit();
-		GLFWwindow* window = glfwCreateWindow(800, 600, "Test Window", nullptr, nullptr);
+		window = glfwCreateWindow(800, 600, "Test Window", nullptr, nullptr);
 		
 		// Check if window failed to create
 		if (!window) return false;
 		
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
+		glfwSwapInterval(1);
 		return true;
 	}
 	
@@ -31,6 +32,6 @@ namespace Hunter {
 	}
 	
 	void WindowsOSWindow::PollForEvent() {
-		
+		glfwPollEvents();
 	}
 }

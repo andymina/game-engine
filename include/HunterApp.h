@@ -9,7 +9,7 @@
 #define HunterApp_h
 
 #include "HunterCentral.h"
-#include "WindowsOS/WindowsOSWindow.h"
+#include "Window.h"
 
 namespace Hunter {
 	class HUNTER_API HunterApp {
@@ -20,10 +20,11 @@ namespace Hunter {
 		static HunterApp* GetApplication();
 		// Creates the first instance of singleton
 		static void Init();
+		virtual ~HunterApp();
 		
 	private:
 		HunterApp();
-		virtual ~HunterApp();
+
 		// Make this class a singleton
 		inline static HunterApp* instance{ nullptr };
 		Hunter::Window* appWindow{ nullptr };

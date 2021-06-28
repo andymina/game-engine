@@ -7,6 +7,7 @@
 
 #include <pch.h>
 #include "HunterApp.h"
+#include PLATFORM_WINDOW_FILE
 
 namespace Hunter {
 	void HunterApp::RunGame() {
@@ -24,7 +25,7 @@ namespace Hunter {
 	
 	void HunterApp::Init() {
 		// Make sure this class is a singleton
-		if (instance)
+		if (!instance)
 			instance = new HunterApp;
 	}
 	
@@ -32,8 +33,15 @@ namespace Hunter {
 		// Assert this class is a singleton
 		assert(!instance);
 		
-		this->appWindow = new WindowsOSWindow;
-		this->appWindow->CreateWindow(800, 600);
+		#ifdef _WIN32
+			this->appWindow = new WindowsOSWindow;
+		#elif __APPLE__
+			this->appWindow = new macOSWindow;
+		#endif
+		
+		// Assert that the window was created
+		bool success{ this->appWindow->CreateWindow(800, 600) } ;
+		assert(success);
 	}
 	
 	HunterApp::~HunterApp() {

@@ -10,6 +10,10 @@
 		3223CFC02686F61C006C6412 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3223CFBF2686F61B006C6412 /* OpenGL.framework */; };
 		3223CFC22686F622006C6412 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3223CFC12686F622006C6412 /* IOKit.framework */; };
 		3223CFC42686F629006C6412 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3223CFC32686F629006C6412 /* Cocoa.framework */; };
+		327EC4C82689966D00AEA269 /* Sprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 327EC4C72689966D00AEA269 /* Sprite.h */; };
+		327EC4CB2689977E00AEA269 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 327EC4CA2689977E00AEA269 /* Sprite.cpp */; };
+		327EC4EE268999F200AEA269 /* stb_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 327EC4ED268999F200AEA269 /* stb_image.h */; };
+		327EC4F1268999F700AEA269 /* libstb_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327EC4F0268999F700AEA269 /* libstb_image.a */; };
 		32801A542688EE9800410226 /* khrplatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 32801A3A2688EE9800410226 /* khrplatform.h */; };
 		32801A552688EE9800410226 /* glad.h in Headers */ = {isa = PBXBuildFile; fileRef = 32801A3C2688EE9800410226 /* glad.h */; };
 		32801A562688EE9800410226 /* glfw3.h in Headers */ = {isa = PBXBuildFile; fileRef = 32801A3E2688EE9800410226 /* glfw3.h */; };
@@ -25,12 +29,21 @@
 		32801A602688EE9800410226 /* HunterApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4C2688EE9800410226 /* HunterApp.cpp */; };
 		32801A612688EE9800410226 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4D2688EE9800410226 /* pch.cpp */; };
 		32801A622688EE9800410226 /* WindowsOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4F2688EE9800410226 /* WindowsOSWindow.cpp */; };
+		32B764CF268906430001941C /* macOSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B764CE268906430001941C /* macOSWindow.h */; };
+		32B764D42689065E0001941C /* macOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B764D32689065E0001941C /* macOSWindow.cpp */; };
+		32D6704A268980EF005CDFC8 /* Shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D67049268980EF005CDFC8 /* Shader.h */; };
+		32D6704F26898360005CDFC8 /* OpenGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D6704E26898360005CDFC8 /* OpenGLShader.h */; };
+		32D67053268983AD005CDFC8 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32D67052268983AD005CDFC8 /* OpenGLShader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3223CFBF2686F61B006C6412 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3223CFC12686F622006C6412 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		3223CFC32686F629006C6412 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		327EC4C72689966D00AEA269 /* Sprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		327EC4CA2689977E00AEA269 /* Sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		327EC4ED268999F200AEA269 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		327EC4F0268999F700AEA269 /* libstb_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstb_image.a; sourceTree = "<group>"; };
 		32801A3A2688EE9800410226 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = khrplatform.h; path = deps/include/KHR/khrplatform.h; sourceTree = SOURCE_ROOT; };
 		32801A3C2688EE9800410226 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = glad.h; path = deps/include/glad/glad.h; sourceTree = SOURCE_ROOT; };
 		32801A3E2688EE9800410226 /* glfw3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = glfw3.h; path = deps/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
@@ -46,6 +59,11 @@
 		32801A4C2688EE9800410226 /* HunterApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HunterApp.cpp; path = src/HunterApp.cpp; sourceTree = SOURCE_ROOT; };
 		32801A4D2688EE9800410226 /* pch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = src/pch.cpp; sourceTree = SOURCE_ROOT; };
 		32801A4F2688EE9800410226 /* WindowsOSWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowsOSWindow.cpp; sourceTree = "<group>"; };
+		32B764CE268906430001941C /* macOSWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macOSWindow.h; sourceTree = "<group>"; };
+		32B764D32689065E0001941C /* macOSWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = macOSWindow.cpp; sourceTree = "<group>"; };
+		32D67049268980EF005CDFC8 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		32D6704E26898360005CDFC8 /* OpenGLShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLShader.h; sourceTree = "<group>"; };
+		32D67052268983AD005CDFC8 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLShader.cpp; sourceTree = "<group>"; };
 		32E381032683E6460096EB94 /* libgame-engine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libgame-engine.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E381A12684439F0096EB94 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		32E381A4268446A50096EB94 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -61,6 +79,7 @@
 				3223CFC22686F622006C6412 /* IOKit.framework in Frameworks */,
 				3223CFC02686F61C006C6412 /* OpenGL.framework in Frameworks */,
 				32801A582688EE9800410226 /* libglad.a in Frameworks */,
+				327EC4F1268999F700AEA269 /* libstb_image.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +103,14 @@
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
 		};
+		327EC4EC268999F200AEA269 /* stbi */ = {
+			isa = PBXGroup;
+			children = (
+				327EC4ED268999F200AEA269 /* stb_image.h */,
+			);
+			path = stbi;
+			sourceTree = "<group>";
+		};
 		32801A372688EE9800410226 /* deps */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +123,7 @@
 		32801A382688EE9800410226 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				327EC4EC268999F200AEA269 /* stbi */,
 				32801A392688EE9800410226 /* KHR */,
 				32801A3B2688EE9800410226 /* glad */,
 				32801A3D2688EE9800410226 /* GLFW */,
@@ -135,6 +163,7 @@
 		32801A402688EE9800410226 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				327EC4F0268999F700AEA269 /* libstb_image.a */,
 				32801A412688EE9800410226 /* libglad.a */,
 				32801A422688EE9800410226 /* libglfw3.a */,
 			);
@@ -144,12 +173,16 @@
 		32801A432688EE9800410226 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				32801A442688EE9800410226 /* pch.h */,
-				32801A452688EE9800410226 /* Window.h */,
 				32801A462688EE9800410226 /* Hunter.h */,
-				32801A472688EE9800410226 /* WindowsOS */,
 				32801A492688EE9800410226 /* HunterApp.h */,
 				32801A4A2688EE9800410226 /* HunterCentral.h */,
+				32801A442688EE9800410226 /* pch.h */,
+				32D67049268980EF005CDFC8 /* Shader.h */,
+				327EC4C72689966D00AEA269 /* Sprite.h */,
+				32801A452688EE9800410226 /* Window.h */,
+				32B764CD268906100001941C /* macOS */,
+				32D6704C26898318005CDFC8 /* OpenGL */,
+				32801A472688EE9800410226 /* WindowsOS */,
 			);
 			path = include;
 			sourceTree = SOURCE_ROOT;
@@ -168,31 +201,66 @@
 			children = (
 				32801A4C2688EE9800410226 /* HunterApp.cpp */,
 				32801A4D2688EE9800410226 /* pch.cpp */,
-				32801A4E2688EE9800410226 /* Windows */,
+				327EC4CA2689977E00AEA269 /* Sprite.cpp */,
+				32B764D2268906490001941C /* macOS */,
+				32D6704D2689832E005CDFC8 /* OpenGL */,
+				32801A4E2688EE9800410226 /* WindowsOS */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
-		32801A4E2688EE9800410226 /* Windows */ = {
+		32801A4E2688EE9800410226 /* WindowsOS */ = {
 			isa = PBXGroup;
 			children = (
 				32801A4F2688EE9800410226 /* WindowsOSWindow.cpp */,
 			);
-			name = Windows;
-			path = src/Windows;
+			name = WindowsOS;
+			path = src/WindowsOS;
 			sourceTree = SOURCE_ROOT;
+		};
+		32B764CD268906100001941C /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				32B764CE268906430001941C /* macOSWindow.h */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		32B764D2268906490001941C /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				32B764D32689065E0001941C /* macOSWindow.cpp */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		32D6704C26898318005CDFC8 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				32D6704E26898360005CDFC8 /* OpenGLShader.h */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		32D6704D2689832E005CDFC8 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				32D67052268983AD005CDFC8 /* OpenGLShader.cpp */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
 		};
 		32E380FA2683E6460096EB94 = {
 			isa = PBXGroup;
 			children = (
-				3209FC222688F64300012BE4 /* obj */,
+				32E381A12684439F0096EB94 /* .gitignore */,
+				32E381A4268446A50096EB94 /* README.md */,
 				32801A372688EE9800410226 /* deps */,
 				32801A432688EE9800410226 /* include */,
 				32801A4B2688EE9800410226 /* src */,
-				32E381A4268446A50096EB94 /* README.md */,
-				32E381A12684439F0096EB94 /* .gitignore */,
-				32E381042683E6460096EB94 /* Products */,
+				3209FC222688F64300012BE4 /* obj */,
 				3223CFBE2686F61B006C6412 /* Frameworks */,
+				32E381042683E6460096EB94 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,13 +280,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				32801A5F2688EE9800410226 /* HunterCentral.h in Headers */,
+				327EC4C82689966D00AEA269 /* Sprite.h in Headers */,
 				32801A5E2688EE9800410226 /* HunterApp.h in Headers */,
 				32801A562688EE9800410226 /* glfw3.h in Headers */,
+				32B764CF268906430001941C /* macOSWindow.h in Headers */,
 				32801A572688EE9800410226 /* glfw3native.h in Headers */,
 				32801A5B2688EE9800410226 /* Window.h in Headers */,
 				32801A552688EE9800410226 /* glad.h in Headers */,
+				32D6704F26898360005CDFC8 /* OpenGLShader.h in Headers */,
 				32801A5D2688EE9800410226 /* WindowsOSWindow.h in Headers */,
 				32801A5C2688EE9800410226 /* Hunter.h in Headers */,
+				327EC4EE268999F200AEA269 /* stb_image.h in Headers */,
+				32D6704A268980EF005CDFC8 /* Shader.h in Headers */,
 				32801A5A2688EE9800410226 /* pch.h in Headers */,
 				32801A542688EE9800410226 /* khrplatform.h in Headers */,
 			);
@@ -282,7 +355,10 @@
 			files = (
 				32801A602688EE9800410226 /* HunterApp.cpp in Sources */,
 				32801A612688EE9800410226 /* pch.cpp in Sources */,
+				327EC4CB2689977E00AEA269 /* Sprite.cpp in Sources */,
 				32801A622688EE9800410226 /* WindowsOSWindow.cpp in Sources */,
+				32D67053268983AD005CDFC8 /* OpenGLShader.cpp in Sources */,
+				32B764D42689065E0001941C /* macOSWindow.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
