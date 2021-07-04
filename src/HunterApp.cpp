@@ -16,13 +16,15 @@ namespace Hunter {
 		HLOG("Starting the game");
 		
 		Renderer::Init();
-		Sprite test1{ "assets/sprites/mario.png" };
+		Sprite mario{ "assets/sprites/mario.gif" };
+		Sprite luigi{ "assets/sprites/luigi.gif" };
 		
 		// Event loop
 		while (!appWindow->ShouldClose()) {
 			this->appWindow->ClearScreen();
 			
-			Renderer::Draw(test1, 100, 100, test1.GetWidth(), test1.GetHeight());
+			Renderer::Draw(mario, 100, 100, mario.GetWidth(), mario.GetHeight());
+			Renderer::Draw(luigi, 150, 150, luigi.GetWidth(), luigi.GetHeight());
 			
 			this->appWindow->SwapBuffers();
 			this->appWindow->PollForEvent();

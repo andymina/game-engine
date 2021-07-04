@@ -17,9 +17,12 @@ namespace Hunter {
 	void OpenGLImplementation::Init() {
 		std::string vertexPath = "assets/shaders/DefaultVertexShader.glsl";
 		std::string fragmentPath = "assets/shaders/DefaultFragmentShader.glsl";
-		bool status = defaultShader.Load(vertexPath, fragmentPath);
-		if (!status) HLOG("ERROR: FAILED TO LOAD SHADERS");
+		if (!defaultShader.Load(vertexPath, fragmentPath))
+			HLOG("ERROR: FAILED TO LOAD SHADERS");
 		defaultShader.Use();
+		
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 	
 	/**
