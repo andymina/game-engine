@@ -15,11 +15,17 @@ namespace Hunter {
 	class HUNTER_API Sprite {
 	public:
 		Sprite(const std::string &spritePath);
+		Sprite(const Sprite &other); // copy constructor
+		Sprite(Sprite &&other); // move constructor
+		Sprite& operator=(const Sprite &other) = delete; // copy assignment
+		Sprite& operator=(Sprite &&other) = delete; // move assignment
+		~Sprite();
+		
 		bool Load(const std::string &spritePath);
 		int GetWidth() const;
 		int GetHeight() const;
 		const unsigned char* GetImagePointer() const;
-		~Sprite();
+		
 		
 	private:
 		unsigned char* img{ nullptr };
