@@ -80,6 +80,8 @@
 		32E381032683E6460096EB94 /* libgame-engine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libgame-engine.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E381A12684439F0096EB94 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		32E381A4268446A50096EB94 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		32E40B8326921E870027AE36 /* luigi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = luigi.gif; sourceTree = "<group>"; };
+		32E40B8426921EC80027AE36 /* mario.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mario.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,8 @@
 		32293CE0269146CB002B6886 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				32E40B8426921EC80027AE36 /* mario.gif */,
+				32E40B8326921E870027AE36 /* luigi.gif */,
 				32293CE12691478F002B6886 /* mario.png */,
 			);
 			path = sprites;
