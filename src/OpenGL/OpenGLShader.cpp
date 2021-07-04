@@ -64,18 +64,30 @@ namespace Hunter {
 		// Read vertex code from path and create shader
 		std::string temp = ReadCode(vertexPath);
 		assert(temp.find("Error") == std::string::npos);
+		if (temp.find("Error") != std::string::npos) {
+			HLOG(temp);
+			return false;
+		}
 		const char* vertexCode{ temp.c_str() };
 		unsigned int vertexShader{ CompileShader(vertexCode, GL_VERTEX_SHADER) };
 		if (!vertexShader) return false;
 		
 		// Read fragment code from path and create shader
 		temp = ReadCode(fragmentPath);
-		assert(temp.find("Error") == std::string::npos);
+		if (temp.find("Error") != std::string::npos) {
+			HLOG(temp);
+			return false;
+		}
 		const char* fragmentCode{ temp.c_str() };
 		unsigned int fragmentShader{ CompileShader(fragmentCode, GL_FRAGMENT_SHADER) };
 		if (!fragmentShader) return false;
 		
+		// Check if there was previous shader and clear it
+		if (shaderProgram)
+			glDeleteProgram(shaderProgram);
+		
 		// Attach and link shaders
+		shaderProgram = glCreateProgram();
 		glAttachShader(shaderProgram, vertexShader);
 		glAttachShader(shaderProgram, fragmentShader);
 		glLinkProgram(shaderProgram);
