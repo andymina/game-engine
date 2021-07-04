@@ -17,7 +17,7 @@ namespace Hunter {
 		virtual bool Load(const std::string &vertexPath, const std::string &fragmentPath) = 0;
 		virtual void Use() = 0;
 		virtual void SetVec2Int(const std::string &uniformName, const int &val1, const int &val2) = 0;
-		virtual ~Shader() = 0 {};
+		virtual ~Shader() {};
 		
 	};
 }

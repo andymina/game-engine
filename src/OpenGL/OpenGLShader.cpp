@@ -58,12 +58,13 @@ namespace Hunter {
 				HLOG("ERROR COMPILING FRAGMENT SHADER");
 			HLOG(infoLog);
 		}
+		
+		return shader;
 	}
 	
 	bool OpenGLShader::Load(const std::string &vertexPath, const std::string &fragmentPath) {
 		// Read vertex code from path and create shader
 		std::string temp = ReadCode(vertexPath);
-		assert(temp.find("Error") == std::string::npos);
 		if (temp.find("Error") != std::string::npos) {
 			HLOG(temp);
 			return false;

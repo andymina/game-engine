@@ -18,6 +18,7 @@ namespace Hunter {
 		bool Load(const std::string &spritePath);
 		int GetWidth() const;
 		int GetHeight() const;
+		const unsigned char* GetImagePointer() const;
 		~Sprite();
 		
 	private:

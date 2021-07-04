@@ -20,6 +20,10 @@ namespace Hunter {
 		virtual void DeleteWindow() override;
 		virtual void SwapBuffers() override;
 		virtual void PollForEvent() override;
+		virtual void ClearScreen() override;
+		virtual int GetWidth() const override;
+		virtual int GetHeight() const override;
+		virtual bool ShouldClose() const override;
 	private:
 		GLFWwindow* window;
 	};

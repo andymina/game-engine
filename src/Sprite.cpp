@@ -11,6 +11,7 @@
 
 namespace Hunter {
 	Sprite::Sprite(const std::string &spritePath) {
+		stbi_set_flip_vertically_on_load(true);
 		if (!Load(spritePath))
 			HLOG("ERROR LOADING SPRITE");
 	}
@@ -32,5 +33,9 @@ namespace Hunter {
 		
 		if (img) return true;
 		else return false;
+	}
+	
+	const unsigned char* Sprite::GetImagePointer() const {
+		return img;
 	}
 }
