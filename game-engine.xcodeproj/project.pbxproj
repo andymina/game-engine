@@ -39,6 +39,10 @@
 		32D6704A268980EF005CDFC8 /* Shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D67049268980EF005CDFC8 /* Shader.h */; };
 		32D6704F26898360005CDFC8 /* OpenGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D6704E26898360005CDFC8 /* OpenGLShader.h */; };
 		32D67053268983AD005CDFC8 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32D67052268983AD005CDFC8 /* OpenGLShader.cpp */; };
+		32E40B89269224CB0027AE36 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E40B88269224CB0027AE36 /* Event.h */; };
+		32E40B8C269225730027AE36 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E40B8B269225730027AE36 /* Event.cpp */; };
+		32E40B8F269225F20027AE36 /* KeyboardEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E40B8E269225F20027AE36 /* KeyboardEvents.h */; };
+		32E40B92269227F50027AE36 /* KeyboardEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E40B91269227F50027AE36 /* KeyboardEvents.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		32E381A4268446A50096EB94 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		32E40B8326921E870027AE36 /* luigi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = luigi.gif; sourceTree = "<group>"; };
 		32E40B8426921EC80027AE36 /* mario.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mario.gif; sourceTree = "<group>"; };
+		32E40B88269224CB0027AE36 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		32E40B8B269225730027AE36 /* Event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		32E40B8E269225F20027AE36 /* KeyboardEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardEvents.h; sourceTree = "<group>"; };
+		32E40B91269227F50027AE36 /* KeyboardEvents.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardEvents.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,8 @@
 				32801A472688EE9800410226 /* WindowsOS */,
 				32293CCB2691372E002B6886 /* Renderer.h */,
 				32293CD22691398D002B6886 /* RendererImplementation.h */,
+				32E40B88269224CB0027AE36 /* Event.h */,
+				32E40B8E269225F20027AE36 /* KeyboardEvents.h */,
 			);
 			path = include;
 			sourceTree = SOURCE_ROOT;
@@ -251,6 +261,8 @@
 				32D6704D2689832E005CDFC8 /* OpenGL */,
 				32801A4E2688EE9800410226 /* WindowsOS */,
 				32293CCE26913817002B6886 /* Renderer.cpp */,
+				32E40B8B269225730027AE36 /* Event.cpp */,
+				32E40B91269227F50027AE36 /* KeyboardEvents.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -328,6 +340,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32E40B8F269225F20027AE36 /* KeyboardEvents.h in Headers */,
 				32801A5F2688EE9800410226 /* HunterCentral.h in Headers */,
 				327EC4C82689966D00AEA269 /* Sprite.h in Headers */,
 				32801A5E2688EE9800410226 /* HunterApp.h in Headers */,
@@ -335,6 +348,7 @@
 				32B764CF268906430001941C /* macOSWindow.h in Headers */,
 				32293CD626913A6A002B6886 /* OpenGLImplementation.h in Headers */,
 				32801A572688EE9800410226 /* glfw3native.h in Headers */,
+				32E40B89269224CB0027AE36 /* Event.h in Headers */,
 				32801A5B2688EE9800410226 /* Window.h in Headers */,
 				32293CCC2691372E002B6886 /* Renderer.h in Headers */,
 				32293CD32691398D002B6886 /* RendererImplementation.h in Headers */,
@@ -408,6 +422,8 @@
 				32801A602688EE9800410226 /* HunterApp.cpp in Sources */,
 				32801A612688EE9800410226 /* pch.cpp in Sources */,
 				327EC4CB2689977E00AEA269 /* Sprite.cpp in Sources */,
+				32E40B92269227F50027AE36 /* KeyboardEvents.cpp in Sources */,
+				32E40B8C269225730027AE36 /* Event.cpp in Sources */,
 				32801A622688EE9800410226 /* WindowsOSWindow.cpp in Sources */,
 				32293CD926913AE9002B6886 /* OpenGLImplementation.cpp in Sources */,
 				32293CCF26913817002B6886 /* Renderer.cpp in Sources */,
