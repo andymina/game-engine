@@ -34,6 +34,7 @@
 		32801A602688EE9800410226 /* HunterApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4C2688EE9800410226 /* HunterApp.cpp */; };
 		32801A612688EE9800410226 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4D2688EE9800410226 /* pch.cpp */; };
 		32801A622688EE9800410226 /* WindowsOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4F2688EE9800410226 /* WindowsOSWindow.cpp */; };
+		32A6C7E12693CA7F00987A61 /* HunterKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A6C7E02693CA7F00987A61 /* HunterKeys.h */; };
 		32B764CF268906430001941C /* macOSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B764CE268906430001941C /* macOSWindow.h */; };
 		32B764D42689065E0001941C /* macOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B764D32689065E0001941C /* macOSWindow.cpp */; };
 		32D6704A268980EF005CDFC8 /* Shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D67049268980EF005CDFC8 /* Shader.h */; };
@@ -76,6 +77,7 @@
 		32801A4C2688EE9800410226 /* HunterApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HunterApp.cpp; path = src/HunterApp.cpp; sourceTree = SOURCE_ROOT; };
 		32801A4D2688EE9800410226 /* pch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = src/pch.cpp; sourceTree = SOURCE_ROOT; };
 		32801A4F2688EE9800410226 /* WindowsOSWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowsOSWindow.cpp; sourceTree = "<group>"; };
+		32A6C7E02693CA7F00987A61 /* HunterKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HunterKeys.h; sourceTree = "<group>"; };
 		32B764CE268906430001941C /* macOSWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macOSWindow.h; sourceTree = "<group>"; };
 		32B764D32689065E0001941C /* macOSWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = macOSWindow.cpp; sourceTree = "<group>"; };
 		32D67049268980EF005CDFC8 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				32293CD22691398D002B6886 /* RendererImplementation.h */,
 				32E40B88269224CB0027AE36 /* Event.h */,
 				32E40B8E269225F20027AE36 /* KeyboardEvents.h */,
+				32A6C7E02693CA7F00987A61 /* HunterKeys.h */,
 			);
 			path = include;
 			sourceTree = SOURCE_ROOT;
@@ -356,6 +359,7 @@
 				32D6704F26898360005CDFC8 /* OpenGLShader.h in Headers */,
 				32801A5D2688EE9800410226 /* WindowsOSWindow.h in Headers */,
 				32801A5C2688EE9800410226 /* Hunter.h in Headers */,
+				32A6C7E12693CA7F00987A61 /* HunterKeys.h in Headers */,
 				327EC4EE268999F200AEA269 /* stb_image.h in Headers */,
 				32D6704A268980EF005CDFC8 /* Shader.h in Headers */,
 				32801A5A2688EE9800410226 /* pch.h in Headers */,

@@ -21,11 +21,15 @@ namespace Hunter {
 		virtual void SwapBuffers() override;
 		virtual void PollForEvent() override;
 		virtual void ClearScreen() override;
+		virtual void SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) override;
 		virtual int GetWidth() const override;
 		virtual int GetHeight() const override;
 		virtual bool ShouldClose() const override;
 		
 	private:
+		struct Callbacks {
+			std::function<void(KeyPressedEvent &event)> keyPressedCallback;
+		} callbacks;
 		GLFWwindow* window;
 	};
 }

@@ -10,6 +10,7 @@
 
 #include "HunterCentral.h"
 #include "Window.h"
+#include "KeyboardEvents.h"
 
 namespace Hunter {
 	class HUNTER_API HunterApp {
@@ -24,6 +25,8 @@ namespace Hunter {
 		
 		static int GetWindowWidth();
 		static int GetWindowHeight();
+		
+		void OnKeyPressed(KeyPressedEvent &event);
 		
 	private:
 		HunterApp();

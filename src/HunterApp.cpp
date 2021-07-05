@@ -54,6 +54,10 @@ namespace Hunter {
 		// Assert that the window was created
 		bool success{ this->appWindow->CreateWindow(800, 600) } ;
 		assert(success);
+		
+		this->appWindow->SetKeyPressedCallback([this](KeyPressedEvent &event) {
+			OnKeyPressed(event);
+		});
 	}
 	
 	int HunterApp::GetWindowWidth() {
@@ -66,5 +70,9 @@ namespace Hunter {
 	
 	HunterApp::~HunterApp() {
 		this->appWindow->DeleteWindow();
+	}
+	
+	void HunterApp::OnKeyPressed(KeyPressedEvent &event) {
+		HLOG(event.GetKeyCode());
 	}
 }

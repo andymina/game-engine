@@ -27,6 +27,17 @@ namespace Hunter {
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
 		glfwSwapInterval(1);
+		
+		glfwSetWindowUserPointer(window, &callbacks);
+		
+		glfwSetKeyCallback(window, [](GLFWwindow *window, int key, int scancode, int action, int mods) {
+			if (action == GLFW_PRESS || action == GLFW_REPEAT) {
+				KeyPressedEvent event{ key };
+				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+				
+				callbacks->keyPressedCallback(event);
+			}
+		});
 		return true;
 	}
 	
@@ -45,6 +56,10 @@ namespace Hunter {
 	
 	void macOSWindow::ClearScreen() {
 		glClear(GL_COLOR_BUFFER_BIT);
+	}
+	
+	void macOSWindow::SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) {
+		callbacks.keyPressedCallback = newCallback;
 	}
 	
 	int macOSWindow::GetWidth() const {
