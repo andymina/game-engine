@@ -26,11 +26,10 @@ namespace Hunter {
 		int GetHeight() const;
 		const unsigned char* GetImagePointer() const;
 		
-		
 	private:
 		unsigned char* img{ nullptr };
-		int width;
-		int height;
+		int width{ -1 };
+		int height{ -1 };
 		int numChannels{ 0 };
 	};
 }

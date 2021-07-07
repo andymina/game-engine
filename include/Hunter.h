@@ -10,11 +10,15 @@
 
 #include "HunterCentral.h"
 #include "HunterApp.h"
+#include "Sprite.h"
+#include "Renderer.h"
+#include "HunterKeys.h"
 
 #define START_GAME(classname)\
 	int main() {\
-		classname::Init();\
-		classname::GetApplication()->RunGame();\
+		classname* gamePointer = new classname;\
+		gamePointer->GetApplication()->RunGame();\
+		delete gamePointer;\
 	}\
 
 #endif /* Hunter_h */

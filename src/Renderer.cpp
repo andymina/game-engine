@@ -12,10 +12,14 @@
 namespace Hunter {
 	Renderer::Renderer() {
 		#ifdef _HUNTER_OPENGL
-				DrawingEngine = new OpenGLImplementation;
+				drawingEngine = new OpenGLImplementation;
 		#else
 			#only_open_gl
 		#endif
+	}
+	
+	Renderer::~Renderer() {
+		delete drawingEngine;
 	}
 	
 	void Renderer::Init() {
@@ -28,8 +32,13 @@ namespace Hunter {
 			delete instance;
 	}
 	
+	void Renderer::ClearFrame() {
+		instance->drawingEngine->ClearFrame();
+	}
+	
 	void Renderer::Draw(const Sprite &img, int x_pos, int y_pos, int width, int height) {
 		assert(instance);
-		instance->DrawingEngine->Draw(img, x_pos, y_pos, width, height);
+		instance->drawingEngine->Draw(img, x_pos, y_pos, width, height);
 	}
+	
 }

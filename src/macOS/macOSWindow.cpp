@@ -54,7 +54,7 @@ namespace Hunter {
 		glfwPollEvents();
 	}
 	
-	void macOSWindow::ClearScreen() {
+	void macOSWindow::ClearFrame() {
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 	

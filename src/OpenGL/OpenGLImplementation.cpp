@@ -25,6 +25,11 @@ namespace Hunter {
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 	
+	void OpenGLImplementation::ClearFrame() {
+		glClearColor(0.0, 0.0, 0.0, 1.0);
+		glClear(GL_COLOR_BUFFER_BIT);
+	}
+	
 	/**
 	 Draws a sprite on the screen.
 	 

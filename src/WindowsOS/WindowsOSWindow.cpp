@@ -68,7 +68,7 @@ namespace Hunter {
 		return glfwWindowShouldClose(window);
 	}
 	
-	void WindowsOSWindow::ClearScreen() {
+	void WindowsOSWindow::ClearFrame() {
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 }
