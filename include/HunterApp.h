@@ -10,24 +10,27 @@
 
 #include "HunterCentral.h"
 #include "Window.h"
+#include "KeyboardEvents.h"
 
 namespace Hunter {
 	class HUNTER_API HunterApp {
-	public:
+	public: // open to everyone
 		// Starts the game
-		void RunGame();
+		virtual void RunGame();
 		// Gets the instance of the singleton
 		static HunterApp* GetApplication();
-		// Creates the first instance of singleton
-		static void Init();
+		virtual void OnUpdate();
 		virtual ~HunterApp();
 		
 		static int GetWindowWidth();
 		static int GetWindowHeight();
 		
-	private:
+		void OnKeyPressed(KeyPressedEvent &event);
+		
+	protected: // open to children classes only
 		HunterApp();
 
+	private: // open to noone
 		// Make this class a singleton
 		inline static HunterApp* instance{ nullptr };
 		Hunter::Window* appWindow{ nullptr };

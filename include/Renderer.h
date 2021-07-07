@@ -8,20 +8,23 @@
 #ifndef Renderer_h
 #define Renderer_h
 
+#include "HunterCentral.h"
 #include "Sprite.h"
 #include "RendererImplementation.h"
 
 namespace Hunter {
-	class Renderer {
+	class HUNTER_API Renderer {
 	public:
 		static void Init();
 		static void Terminate();
+		static void ClearFrame();
 		static void Draw(const Sprite &img, int x_pos, int y_pos, int width, int height);
 		
 	private:
 		Renderer();
+		~Renderer();
 		inline static Renderer* instance{ nullptr };
-		RendererImplementation* DrawingEngine{ nullptr };
+		RendererImplementation* drawingEngine{ nullptr };
 	};
 }
 

@@ -25,6 +25,13 @@ namespace Hunter {
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
 		glfwSwapInterval(1);
+		
+		glfwSetKeyCallback(window, [](GLFWwindow *window, int key, int scancode, int action, int mods) {
+			KeyPressedEvent event{ key };
+			Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+			
+			callbacks->keyPressedCallback(event);
+		});
 		return true;
 	}
 	
@@ -39,6 +46,10 @@ namespace Hunter {
 	
 	void WindowsOSWindow::PollForEvent() {
 		glfwPollEvents();
+	}
+	
+	void WindowsOSWindow::SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) {
+		callbacks.keyPressedCallback = newCallback;
 	}
 	
 	int WindowsOSWindow::GetWidth() const {
@@ -57,7 +68,7 @@ namespace Hunter {
 		return glfwWindowShouldClose(window);
 	}
 	
-	void WindowsOSWindow::ClearScreen() {
+	void WindowsOSWindow::ClearFrame() {
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 }
