@@ -10,6 +10,8 @@
 #include "Sprite.h"
 
 namespace Hunter {
+	Sprite::Sprite(): img{ nullptr }, width{ -1 }, height{ -1 }, numChannels{ 0 } {}
+	
 	Sprite::Sprite(const std::string &spritePath) {
 		stbi_set_flip_vertically_on_load(true);
 		if (!Load(spritePath))
@@ -17,7 +19,8 @@ namespace Hunter {
 	}
 	
 	Sprite::~Sprite() {
-		stbi_image_free(img);
+		if (img)
+			stbi_image_free(img);
 	}
 	
 	int Sprite::GetWidth() const {

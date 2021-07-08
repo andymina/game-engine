@@ -14,6 +14,7 @@
 namespace Hunter {
 	class HUNTER_API Sprite {
 	public:
+		Sprite(); // zero param constructor
 		Sprite(const std::string &spritePath);
 		Sprite(const Sprite &other); // copy constructor
 		Sprite(Sprite &&other); // move constructor
