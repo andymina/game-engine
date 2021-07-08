@@ -10,7 +10,7 @@
 #include PLATFORM_WINDOW_FILE
 #include "Renderer.h"
 #include "Sprite.h"
-#include "HunterKeys.h"
+#include "HunterKeys.h" 
 
 namespace Hunter {
 	void HunterApp::RunGame() {
@@ -18,14 +18,19 @@ namespace Hunter {
 		
 		Renderer::Init();
 		
+		nextFrameTime = clock::now() + frameDuration;
 		// Event loop
 		while (!appWindow->ShouldClose()) {
 			Renderer::ClearFrame();
 			
 			OnUpdate();
 			
+			std::this_thread::sleep_until(nextFrameTime);
+			
 			this->appWindow->SwapBuffers();
 			this->appWindow->PollForEvent();
+			
+			nextFrameTime += frameDuration;
 		}
 	}
 

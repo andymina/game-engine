@@ -8,12 +8,15 @@
 #ifndef HunterApp_h
 #define HunterApp_h
 
+#include "pch.h"
 #include "HunterCentral.h"
 #include "Window.h"
 #include "KeyboardEvents.h"
 
 namespace Hunter {
 	class HUNTER_API HunterApp {
+	typedef std::chrono::steady_clock clock;
+		
 	public: // open to everyone
 		// Starts the game
 		virtual void RunGame();
@@ -34,6 +37,8 @@ namespace Hunter {
 		// Make this class a singleton
 		inline static HunterApp* instance{ nullptr };
 		Hunter::Window* appWindow{ nullptr };
+		clock::time_point nextFrameTime;
+		std::chrono::milliseconds frameDuration{ 16 }; // default to 60 FPS
 	};
 }
 

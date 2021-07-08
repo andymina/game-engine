@@ -35,6 +35,9 @@
 		32801A612688EE9800410226 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4D2688EE9800410226 /* pch.cpp */; };
 		32801A622688EE9800410226 /* WindowsOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32801A4F2688EE9800410226 /* WindowsOSWindow.cpp */; };
 		32A6C7E12693CA7F00987A61 /* HunterKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A6C7E02693CA7F00987A61 /* HunterKeys.h */; };
+		32AF49D22697AD0100084C5A /* DefaultVertexShader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32293CDD26913C6F002B6886 /* DefaultVertexShader.glsl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		32AF49D32697AD0100084C5A /* DefaultFragmentShader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32293CDE26913D17002B6886 /* DefaultFragmentShader.glsl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		32B5977B2696A57100067C1F /* libgame-engine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E381032683E6460096EB94 /* libgame-engine.dylib */; };
 		32B764CF268906430001941C /* macOSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B764CE268906430001941C /* macOSWindow.h */; };
 		32B764D42689065E0001941C /* macOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B764D32689065E0001941C /* macOSWindow.cpp */; };
 		32D6704A268980EF005CDFC8 /* Shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D67049268980EF005CDFC8 /* Shader.h */; };
@@ -45,6 +48,20 @@
 		32E40B8F269225F20027AE36 /* KeyboardEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E40B8E269225F20027AE36 /* KeyboardEvents.h */; };
 		32E40B92269227F50027AE36 /* KeyboardEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E40B91269227F50027AE36 /* KeyboardEvents.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32AF49CF2697AC4B00084C5A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				32AF49D22697AD0100084C5A /* DefaultVertexShader.glsl in CopyFiles */,
+				32AF49D32697AD0100084C5A /* DefaultFragmentShader.glsl in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3223CFBF2686F61B006C6412 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -99,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32B5977B2696A57100067C1F /* libgame-engine.dylib in Frameworks */,
 				3223CFC42686F629006C6412 /* Cocoa.framework in Frameworks */,
 				32801A592688EE9800410226 /* libglfw3.a in Frameworks */,
 				3223CFC22686F622006C6412 /* IOKit.framework in Frameworks */,
@@ -377,6 +395,8 @@
 				32E380FF2683E6460096EB94 /* Headers */,
 				32E381002683E6460096EB94 /* Sources */,
 				32E381012683E6460096EB94 /* Frameworks */,
+				32B598FB26974DCB00067C1F /* Resources */,
+				32AF49CF2697AC4B00084C5A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -417,6 +437,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32B598FB26974DCB00067C1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32E381002683E6460096EB94 /* Sources */ = {
@@ -578,6 +608,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/deps/lib",
 				);
+				MACH_O_TYPE = mh_dylib;
 				OBJROOT = "$(PROJECT_DIR)/obj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -608,6 +639,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/deps/lib",
 				);
+				MACH_O_TYPE = mh_dylib;
 				OBJROOT = "$(PROJECT_DIR)/obj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
