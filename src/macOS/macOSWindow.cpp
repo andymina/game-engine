@@ -31,11 +31,21 @@ namespace Hunter {
 		glfwSetWindowUserPointer(window, &callbacks);
 		
 		glfwSetKeyCallback(window, [](GLFWwindow *window, int key, int scancode, int action, int mods) {
-			if (action == GLFW_PRESS || action == GLFW_REPEAT) {
+			if (action == GLFW_PRESS) {
 				KeyPressedEvent event{ key };
 				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
 				
 				callbacks->keyPressedCallback(event);
+			} else if (action == GLFW_REPEAT) {
+				KeyHeldEvent event{ key };
+				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+				
+				callbacks->keyHeldCallback(event);
+			} else if (action == GLFW_RELEASE) {
+				KeyReleasedEvent event{ key };
+				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+				
+				callbacks->keyReleasedCallback(event);
 			}
 		});
 		return true;
