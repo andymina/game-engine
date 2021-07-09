@@ -14,7 +14,7 @@
 
 namespace Hunter {
 	void HunterApp::RunGame() {
-		HLOG("Starting the game");
+		HLOG("Starting the game\n\n");
 		
 		Renderer::Init();
 		
@@ -83,14 +83,14 @@ namespace Hunter {
 	}
 	
 	void HunterApp::OnKeyPressed(KeyPressedEvent &event) {
-		HLOG("pressed");
+		
 	}
 	
 	void HunterApp::OnKeyHeld(KeyHeldEvent &event) {
-		HLOG("holding");
+		
 	}
 	
 	void HunterApp::OnKeyReleased(KeyReleasedEvent &event) {
-		HLOG("released it");
+		
 	}
 }
