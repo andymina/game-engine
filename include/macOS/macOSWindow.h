@@ -22,6 +22,8 @@ namespace Hunter {
 		virtual void PollForEvent() override;
 		virtual void ClearFrame() override;
 		virtual void SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) override;
+		virtual void SetKeyHeldCallback(std::function<void(KeyHeldEvent&)> newCallback) override;
+		virtual void SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback) override;
 		virtual int GetWidth() const override;
 		virtual int GetHeight() const override;
 		virtual bool ShouldClose() const override;
@@ -29,6 +31,8 @@ namespace Hunter {
 	private:
 		struct Callbacks {
 			std::function<void(KeyPressedEvent &event)> keyPressedCallback;
+			std::function<void(KeyHeldEvent &event)> keyHeldCallback;
+			std::function<void(KeyReleasedEvent &event)> keyReleasedCallback;
 		} callbacks;
 		
 		GLFWwindow* window;

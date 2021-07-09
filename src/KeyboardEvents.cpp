@@ -10,8 +10,12 @@
 
 namespace Hunter {
 	KeyPressedEvent::KeyPressedEvent(int key): KeyCode(key) {};
-	
 	int KeyPressedEvent::GetKeyCode() const {
+		return KeyCode;
+	}
+	
+	KeyHeldEvent::KeyHeldEvent(int key): KeyCode(key) {};
+	int KeyHeldEvent::GetKeyCode() const {
 		return KeyCode;
 	}
 	

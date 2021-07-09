@@ -23,7 +23,11 @@ namespace Hunter {
 		virtual void SwapBuffers() = 0;
 		virtual void PollForEvent() = 0;
 		virtual void ClearFrame() = 0;
+		
 		virtual void SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) = 0;
+		virtual void SetKeyHeldCallback(std::function<void(KeyHeldEvent&)> newCallback) = 0;
+		virtual void SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback) = 0;
+		
 		virtual int GetWidth() const = 0;
 		virtual int GetHeight() const = 0;
 		virtual bool ShouldClose() const = 0;

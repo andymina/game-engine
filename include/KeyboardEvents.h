@@ -8,12 +8,22 @@
 #ifndef KeyboardEvents_h
 #define KeyboardEvents_h
 
+#include "HunterCentral.h"
 #include "Event.h"
 
 namespace Hunter {
 	class HUNTER_API KeyPressedEvent: public Event {
 	public:
 		KeyPressedEvent(int key);
+		int GetKeyCode() const;
+		
+	private:
+		int KeyCode{ -1 };
+	};
+	
+	class HUNTER_API KeyHeldEvent: public Event {
+	public:
+		KeyHeldEvent(int key);
 		int GetKeyCode() const;
 		
 	private:
