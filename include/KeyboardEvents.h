@@ -11,7 +11,7 @@
 #include "Event.h"
 
 namespace Hunter {
-	class KeyPressedEvent: public Event {
+	class HUNTER_API KeyPressedEvent: public Event {
 	public:
 		KeyPressedEvent(int key);
 		int GetKeyCode() const;
@@ -20,7 +20,7 @@ namespace Hunter {
 		int KeyCode{ -1 };
 	};
 	
-	class KeyReleasedEvent: public Event {
+	class HUNTER_API KeyReleasedEvent: public Event {
 	public:
 		KeyReleasedEvent(int key);
 		int GetKeyCode() const;
