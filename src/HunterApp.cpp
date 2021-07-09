@@ -24,7 +24,7 @@ namespace Hunter {
 			Renderer::ClearFrame();
 			
 			OnUpdate();
-			
+
 			std::this_thread::sleep_until(nextFrameTime);
 			
 			this->appWindow->SwapBuffers();
@@ -60,6 +60,14 @@ namespace Hunter {
 		this->appWindow->SetKeyPressedCallback([this](KeyPressedEvent &event) {
 			OnKeyPressed(event);
 		});
+		
+		this->appWindow->SetKeyHeldCallback([this](KeyHeldEvent &event) {
+			OnKeyHeld(event);
+		});
+		
+		this->appWindow->SetKeyReleasedCallback([this](KeyReleasedEvent &event) {
+			OnKeyReleased(event);
+		});
 	}
 	
 	int HunterApp::GetWindowWidth() {
@@ -75,6 +83,14 @@ namespace Hunter {
 	}
 	
 	void HunterApp::OnKeyPressed(KeyPressedEvent &event) {
-		 HLOG(event.GetKeyCode());
+		HLOG("pressed");
+	}
+	
+	void HunterApp::OnKeyHeld(KeyHeldEvent &event) {
+		HLOG("holding");
+	}
+	
+	void HunterApp::OnKeyReleased(KeyReleasedEvent &event) {
+		HLOG("released it");
 	}
 }

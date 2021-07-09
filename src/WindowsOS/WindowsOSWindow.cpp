@@ -52,6 +52,14 @@ namespace Hunter {
 		callbacks.keyPressedCallback = newCallback;
 	}
 	
+	void WindowsOSWindow::SetKeyHeldCallback(std::function<void(KeyHeldEvent&)> newCallback) {
+		callbacks.keyHeldCallback = newCallback;
+	}
+	
+	void WindowsOSWindow::SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback) {
+		callbacks.keyReleasedCallback = newCallback;
+	}
+	
 	int WindowsOSWindow::GetWidth() const {
 		int width{ 0 }, height{ 0 };
 		glfwGetWindowSize(window, &width, &height);

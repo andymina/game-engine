@@ -37,7 +37,6 @@
 		32A6C7E12693CA7F00987A61 /* HunterKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A6C7E02693CA7F00987A61 /* HunterKeys.h */; };
 		32AF49D22697AD0100084C5A /* DefaultVertexShader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32293CDD26913C6F002B6886 /* DefaultVertexShader.glsl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		32AF49D32697AD0100084C5A /* DefaultFragmentShader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32293CDE26913D17002B6886 /* DefaultFragmentShader.glsl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		32B5977B2696A57100067C1F /* libgame-engine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E381032683E6460096EB94 /* libgame-engine.dylib */; };
 		32B764CF268906430001941C /* macOSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B764CE268906430001941C /* macOSWindow.h */; };
 		32B764D42689065E0001941C /* macOSWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B764D32689065E0001941C /* macOSWindow.cpp */; };
 		32D6704A268980EF005CDFC8 /* Shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D67049268980EF005CDFC8 /* Shader.h */; };
@@ -116,7 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B5977B2696A57100067C1F /* libgame-engine.dylib in Frameworks */,
 				3223CFC42686F629006C6412 /* Cocoa.framework in Frameworks */,
 				32801A592688EE9800410226 /* libglfw3.a in Frameworks */,
 				3223CFC22686F622006C6412 /* IOKit.framework in Frameworks */,
