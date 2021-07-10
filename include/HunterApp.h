@@ -41,7 +41,7 @@ namespace Hunter {
 		inline static HunterApp* instance{ nullptr };
 		Hunter::Window* appWindow{ nullptr };
 		clock::time_point nextFrameTime;
-		std::chrono::milliseconds frameDuration{ 16 }; // default to 60 FPS
+		std::chrono::milliseconds frameDuration{ 32 }; // default to 60 FPS
 	};
 }
 
