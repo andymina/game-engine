@@ -94,6 +94,11 @@ namespace Hunter {
 		
 		// draw the code
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+		
+		// clean up
+		glDeleteTextures(1, &picture);
+		glDeleteBuffers(1, &VBO);
+		glDeleteVertexArrays(1, &VAO);
 	}
 	
 	OpenGLImplementation::~OpenGLImplementation() {
