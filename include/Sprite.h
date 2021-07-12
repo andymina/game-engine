@@ -18,17 +18,19 @@ namespace Hunter {
 		Sprite(const std::string &spritePath);
 		Sprite(const Sprite &other); // copy constructor
 		Sprite(Sprite &&other); // move constructor
-		Sprite& operator=(const Sprite &other) = delete; // copy assignment
-		Sprite& operator=(Sprite &&other) = delete; // move assignment
+		Sprite& operator=(const Sprite &rhs); // copy assignment
+		Sprite& operator=(Sprite &&rhs); // move assignment
 		~Sprite();
 		
 		bool Load(const std::string &spritePath);
 		int GetWidth() const;
 		int GetHeight() const;
+		std::string GetSpritePath() const;
 		const unsigned char* GetImagePointer() const;
 		
 	private:
-		unsigned char* img{ nullptr };
+		unsigned char *img{ nullptr };
+		std::string spritePath { "" };
 		int width{ -1 };
 		int height{ -1 };
 		int numChannels{ 0 };

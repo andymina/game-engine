@@ -17,7 +17,6 @@ namespace Hunter {
 		HLOG("Starting the game\n\n");
 		
 		Renderer::Init();
-		
 		nextFrameTime = clock::now() + frameDuration;
 		// Event loop
 		while (!appWindow->ShouldClose()) {
