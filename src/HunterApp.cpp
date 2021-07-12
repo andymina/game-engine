@@ -54,7 +54,7 @@ namespace Hunter {
 		#endif
 		
 		// Assert that the window was created
-		bool success{ this->appWindow->CreateWindow(500, 600) } ;
+		bool success{ this->appWindow->CreateWindow(800, 600, "Space War") } ;
 		assert(success);
 		
 		this->appWindow->SetKeyPressedCallback([this](KeyPressedEvent &event) {

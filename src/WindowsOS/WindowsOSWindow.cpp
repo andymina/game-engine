@@ -9,7 +9,7 @@
 #include "WindowsOS/WindowsOSWindow.h"
 
 namespace Hunter {
-	bool WindowsOSWindow::CreateWindow(unsigned int width, unsigned int height) {
+	bool WindowsOSWindow::CreateWindow(unsigned int width, unsigned int height, const std::string &title) {
 		glfwInit();
 		// Tell GLFW what version we're using
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -17,7 +17,7 @@ namespace Hunter {
 		// Tell GLFW we're using core profile
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		
-		window = glfwCreateWindow(800, 600, "Test Window", nullptr, nullptr);
+		window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
 		
 		// Check if window failed to create
 		if (!window) return false;

@@ -16,7 +16,7 @@
 namespace Hunter {
 	class WindowsOSWindow final: public Hunter::Window {
 	public:
-		virtual bool CreateWindow(unsigned int width, unsigned int height) override;
+		virtual bool CreateWindow(unsigned int width, unsigned int height, const std::string &title) override;
 		virtual void DeleteWindow() override;
 		virtual void SwapBuffers() override;
 		virtual void PollForEvent() override;
